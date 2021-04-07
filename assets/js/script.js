@@ -6,7 +6,10 @@ window.$ = $;
 
 // Пример подключения плагина
 // import pluginName from 'plugin-name';
-
+window.onload = function()
+{if (window.$)
+{ alert('jQuery is loaded'); }}
+console.log("Hello world!");
 /**
  * Modules
  */

@@ -6,7 +6,7 @@
 */
 // Пример указания цветов
 $outer-space: #202f2f;
-
+$color-container: lightblue;
 $color-text: $outer-space;
 
 
@@ -14,8 +14,16 @@ $color-text: $outer-space;
 /**
 * Fonts
 */
+
 $font-size-base: 16px;
 
+$font-name: Roboto-Regular;
+$font-name_m: Roboto-Medium;
+
+$font-path: '../fonts';
+
+$font-weight-medium: 500;
+$font-weight-regular: 400;
 
 
 /**
