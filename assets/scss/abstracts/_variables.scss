@@ -5,9 +5,32 @@
 * Значение цвета всегда указывается в HEX-формате в нижнем регистре (кроме исключительных случаев).
 */
 // Пример указания цветов
-$outer-space: #202f2f;
+
+//static
+$white: #ffffff;
+$black: #333333;
+$heather: #bbc4d6;
+$alabaster: #fafafa;
+$slate-gray: #768298;
+$bunker: #121920;
+$curious-blue: #34aadd;
+$carnation: #f95a59;
+$cerise-red: #dc2c53;
+$wild-blue-yonder: #6680ae;
+$tapestry:#A7507B;
+
+//dynamic
+$text-color: $bunker;
+$text-link: $curious-blue;
+$color-background: $alabaster;
+$color-background-light: $white;
+$directory: $heather;
+$directory-active: $slate-gray;
+$text-secondary: $slate-gray;
+$footer-icon-fill: $slate-gray;
+$list-point:$tapestry;
+
 $color-container: lightblue;
-$color-text: $outer-space;
 
 
 
@@ -38,24 +61,38 @@ $line-height-normal: 1.5;
 $line-height-small: 1.2;
 
 
-
 /**
 * Breakpoints
 */
 // Пример указания медиазапросов, затем можно использовать ее как '@media #{$screen-medium} {...}'
-$screen-medium: '(min-width: 768px)';
 
-
+$screen-tablet:  "min-width: 768px";
+$screen-desktop: "min-width: 1280px";
 
 /**
 * Layout
 */
+$container-width-mobile: 335px;
+$container-horizontal-padding-mobile: 20px;
 
+$container-width-table: 650px;
+$container-horizontal-padding-mobile: 59px;
 
+$container-width-desktop: 1240px;
+$container-horizontal-padding-desktop: 100px;
 
 /**
 * Sizes
 */
+$window-width-tablet: 768px;
+$window-width-mobile: 375px;
+
+$button-lg-padding: 10px 30px;
+$button-xs-padding: 6px 30px;
+
+
+$input-height: 50px;
+$input-lg-height: 100px;
 
 
 
@@ -68,13 +105,18 @@ $screen-medium: '(min-width: 768px)';
 /**
 * Radius
 */
-
+$border-radius-small: 2px;
+$border-radius-medium: 5px;
+$border-radius-large: 8px;
+$border-radius-huge: 26px;
 
 
 /**
 * Box-shadows
 */
-
+$box-shadow-header: 0px 3px 10px rgba(0, 0, 0, 0.05);
+$box-shadow-footer: 0px 3px 10px rgba(0, 0, 0, 0.05);
+$box-shadow-card: 0px 12px 40px rgba(0, 0, 0, 0.03), 0px 3px 10px rgba(164, 164, 164, 0.03);
 
 
 /**
