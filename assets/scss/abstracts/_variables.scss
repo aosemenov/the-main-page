@@ -15,15 +15,28 @@ $color-text: $outer-space;
 * Fonts
 */
 
+$font-family-custom: "Roboto-Regular";
+$font-family-custom-medium: "Roboto-Medium";
+$font-family-default: $font-family-custom, $font-family-custom-medium;
 $font-size-base: 16px;
 
-$font-name: Roboto-Regular;
-$font-name_m: Roboto-Medium;
 
 $font-path: '../fonts';
 
 $font-weight-medium: 500;
 $font-weight-regular: 400;
+
+$font-size-biggest: 36px;
+$font-size-huge: 30px;
+$font-size-large: 24px;
+$font-size-medium: 18px;
+$font-size-normal: 16px;
+$font-size-small: 14px;
+
+$line-height-default: 1.67;
+$line-height-normal: 1.5;
+$line-height-small: 1.2;
+
 
 
 /**
