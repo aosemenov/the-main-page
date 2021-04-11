@@ -19,6 +19,7 @@ html {
 }
 
 body {
+    @include indentation-zero;
     $font-size: $font-size-medium;
 
     font-size: rem($font-size);
@@ -26,75 +27,72 @@ body {
     line-height: $line-height-medium;
 
     text-rendering: optimizeLegibility;
-
-    margin: 0;
-    padding: 0;
 }
 
-h1 {
-    font-size: $font-size-huge;
-    line-height: $line-height-normal;
+h1:not([class]) {
+    @include text-biggest;
+    @include vertical-margin-zero;
+    @include title($font-family-custom-medium,$font-weight-medium, $line-height-normal);
+}
+
+h2:not([class]) {
+    @include text-huge;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-normal);
+
+    margin-bottom: rem(30px);
+    margin-top: 0;
+}
+
+h3:not([class]) {
+    @include text-large;
+    @include vertical-margin-zero;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-small);
+}
+
+h4:not([class]) {
+    @include text-average;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
+
+    margin-bottom: rem(20px);
+    margin-top: 0;
+}
+h5:not([class]){
+    @include text-normal;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-default);
 
     margin-top: 0;
-    margin-bottom: 0;
-}
-
-h2 {
-    font-size: $font-size-large;
-    line-height: $line-height-small;
-
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-h3 {
-    font-size: $font-size-average;
-    line-height: $line-height-little;
-
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-h4 {
-    font-size: $font-size-normal;
-    line-height: $line-height-default;
-
-    margin-top: 0;
-    margin-bottom: 0;
-
+    margin-bottom: rem(10px);
 }
 
 
 
-p {
-    font-size: $font-size-small;
+p:not([class]){
+    @include vertical-margin-zero;
+    @include text-small;
+
     line-height: $line-height-medium;
 
-    margin-top: 0;
-    margin-bottom: 0;
-
-        &:not([class]) {
+    &:not([class]) {
         margin-bottom: rem(10px);
-
-        //@include resetting-vertical-indentation-of-last;
     }
 
 }
 
 ol:not([class]) {
-    margin: rem(10px);
-    padding-left: rem(20px);
+    margin: rem(10px) 0;
+    padding-left: rem(0);
     counter-reset: li;
 
     & > li:not([class]) {
         margin-top: rem(10px);
         margin-bottom: rem(10px);
-        padding-left: rem(25px);
-        padding-right: rem(20px);
+        padding-left: rem(20px);
 
         &::before {
             content: counter(li, ".") ". ";
             counter-increment: li;
+
+            padding-right: rem(10px);
 
             color: $cerise-red;
         }
@@ -105,7 +103,10 @@ ol:not([class]) {
     }
 
     & li:not([class]) ol:not([class]) > li:not([class]) {
-        padding-left: rem(32px);
+        padding-left: rem(25px);
+        padding-right: rem(20px);
+
+        list-style-type: none;
 
         &::before {
             counter-increment: li2;
@@ -120,6 +121,7 @@ ol:not([class]) {
         &::before {
             counter-increment: li;
             content: counter(li) ".";
+
         }
         & > ul:not([class]) {
             counter-reset: li2;
@@ -132,7 +134,7 @@ ol:not([class]) {
                     & > li:not([class]) {
                         &::before {
                             counter-increment: li3;
-                            content: counter(li) "." counter(li2) "."counter(li3) ".";
+                            content: counter(li) "." counter(li2) "."counter(li3) " ";
                         }
                     }
                 }
@@ -142,22 +144,29 @@ ol:not([class]) {
 }
 
 li:not([class]) {
-    list-style-type: none;
+}
+
+li{
+    @include text-small;
+    $line-height: 16px;
 }
 
 ul:not([class]) {
-
-    margin: rem(10px);
+    margin: rem(10px) 0;
     padding-left: rem(20px);
 
     & > li:not([class]) {
-
         margin-top: rem(10px);
         margin-bottom: rem(10px);
-        padding-left: rem(25px);
+        padding-left: rem(15px);
+
+        position: relative;
 
         &::before {
+            position: absolute;
 
+            left: 0;
+            top: ($font-size-small/2);
             width: rem(5px);
             height: rem(5px);
             content: '';
@@ -166,37 +175,65 @@ ul:not([class]) {
             background-color: $cerise-red;
         }
     }
-
+    & li:not([class]) ul:not([class]){
+        padding-left: rem(0px)
+    }
     & li:not([class]) ul:not([class]) > li:not([class]) {
-        padding-left: rem(32px);
+        padding-left: rem(15px);
+
+        &::before {
+            position: absolute;
+
+
+            left: 0;
+            top: ($line-height-medium/2);
+            width: rem(5px);
+            height: rem(5px);
+            content: '';
+
+            border-radius: $border-radius-huge;
+            border: solid rem(1px) $cerise-red;
+            background-color: $color-background-light;
+        }
     }
 }
+ul, ol{
+    list-style-type: none;
+}
 
-blockquote {
+
+blockquote:not([class]) {
+    @include text-small;
+    @include horizontal-margin-zero;
+
     border-left: rem(5px) solid $cerise-red;
     border-radius: $border-radius-medium;
-    background: $alabaster;
+    background-color: $color-background;
 
     padding: rem(20px) rem(25px);
 }
 
-a {
-    font-size: $font-size-normal;
+a:not([class]) {
+    @include text-small;
+
     line-height: $line-height-normal;
     font-weight: $font-weight-regular;
 
     color: $color-text-link;
     text-decoration: none;
 
+    cursor: pointer;
+
     &:hover {
         text-decoration: underline;
     }
 }
 
-img {
+img:not([class]) {
     width: 100%;
     height: auto;
 
     overflow: hidden;
     object-fit: cover;
 }
+
