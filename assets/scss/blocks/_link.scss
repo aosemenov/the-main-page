@@ -1,0 +1,17 @@
+.link {
+    @include text-small;
+    @include title($font-family-custom, $font-weight-regular, $line-height-medium);
+
+    color: $color-text-link;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}

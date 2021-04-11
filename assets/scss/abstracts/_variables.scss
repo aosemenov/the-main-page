@@ -17,7 +17,10 @@ $curious-blue: #34aadd;
 $carnation: #f95a59;
 $cerise-red: #dc2c53;
 $wild-blue-yonder: #6680ae;
-$tapestry:#A7507B;
+$tapestry:#a7507b;
+$orange-red-craiola:#ff3332;
+$currentColor: #000000;
+$athens-gray: #ebebf1;
 
 //dynamic
 $color-text: $bunker;
@@ -29,6 +32,7 @@ $color-directory-active: $slate-gray;
 $color-text-secondary: $slate-gray;
 $color-footer-icon: $slate-gray;
 $color-list-point: $tapestry;
+$color-info-icon: $orange-red-craiola;
 
 $color-container: lightblue;
 
@@ -52,13 +56,16 @@ $font-weight-regular: 400;
 $font-size-biggest: 36px;
 $font-size-huge: 30px;
 $font-size-large: 24px;
+$font-size-average: 20px;
 $font-size-medium: 18px;
 $font-size-normal: 16px;
 $font-size-small: 14px;
 
-$line-height-default: 1.67;
-$line-height-normal: 1.5;
-$line-height-small: 1.2;
+$line-height-medium: 1.67;
+$line-height-default: 1.5;
+$line-height-normal: 1.3;
+$line-height-small: 1.27;
+$line-height-little: 1.2;
 
 
 /**

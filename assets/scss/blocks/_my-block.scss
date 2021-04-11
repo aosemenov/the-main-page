@@ -1,6 +1,8 @@
-.my-block {
 
-  display:flex;
-  justify-content: center;
-  background: $color-container;
+
+// Пример стилевого файла блока
+.my-block {
+  margin: 0 auto;
+  width: $container-width-mobile;
+  background: $color-background-light;
 }

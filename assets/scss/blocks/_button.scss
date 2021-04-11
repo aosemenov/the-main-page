@@ -1,0 +1,83 @@
+.button {
+	@include text-small;
+	text-decoration: none;
+	border: 0;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&--filled {
+		$line-height: rem(15px);
+
+		@include title($font-family-custom-medium, $font-weight-medium, $line-height);
+
+		border-radius: $border-radius-medium;
+
+		padding: rem(17.5px) rem(30px);
+		color: $white;
+		background-color: $curious-blue;
+
+		&:hover {
+			background-color: $wild-blue-yonder;
+		}
+
+		&:active {
+			opacity: 0.5;
+		}
+
+		&:disabled {
+			background-color: $athens-gray;
+			color: $heather;
+		}
+	}
+	&--icon {
+		display: inline-flex;
+		align-items: center;
+
+		& svg {
+			margin-left: rem(10px);
+		}
+	}
+	&--half-rounded {
+		@include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
+
+		padding: rem(6px) rem(30px);
+
+		border-radius: $border-radius-medium 0 $border-radius-medium 0;
+	}
+	&--unfilled{
+		background: none;
+
+		color: $curious-blue;
+
+		&:hover {
+			color: $wild-blue-yonder;
+		}
+
+		&:active {
+			opacity: 0.5;
+			color: $wild-blue-yonder;
+		}
+
+		&:disabled {
+			color: $heather;
+		}
+	}
+	&--unfilled-default{
+		$line-height: rem(15px);
+
+		@include title($font-family-custom-medium, $font-weight-medium, $line-height);
+
+	}
+
+	&--unfilled-small{
+		$font-family: Roboto, sans-serif;
+
+		@include title($font-family, $font-weight-medium, 1.3);
+
+	}
+}
+
+
