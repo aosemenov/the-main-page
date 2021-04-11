@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+
+html {
+    font-family: $font-family-default;
+    font-size: 100%;
+
+    color: $color-text;
+    background-color: $color-background;
+}
+
+body {
+    $font-size: $font-size-medium;
+
+    font-size: rem($font-size);
+    font-weight: $font-weight-regular;
+    line-height: $line-height-medium;
+
+    text-rendering: optimizeLegibility;
+
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: $font-size-huge;
+    line-height: $line-height-normal;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: $font-size-large;
+    line-height: $line-height-small;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: $font-size-average;
+    line-height: $line-height-little;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: $font-size-normal;
+    line-height: $line-height-default;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+
+
+p {
+    font-size: $font-size-small;
+    line-height: $line-height-medium;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+        &:not([class]) {
+        margin-bottom: rem(10px);
+
+        //@include resetting-vertical-indentation-of-last;
+    }
+
+}
+
+ol:not([class]) {
+    margin: rem(10px);
+    padding-left: rem(20px);
+    counter-reset: li;
+
+    & > li:not([class]) {
+        margin-top: rem(10px);
+        margin-bottom: rem(10px);
+        padding-left: rem(25px);
+        padding-right: rem(20px);
+
+        &::before {
+            content: counter(li, ".") ". ";
+            counter-increment: li;
+
+            color: $cerise-red;
+        }
+    }
+
+    & li:not([class]) ol:not([class]) {
+        counter-reset: li2;
+    }
+
+    & li:not([class]) ol:not([class]) > li:not([class]) {
+        padding-left: rem(32px);
+
+        &::before {
+            counter-increment: li2;
+            content: counter(li) "." counter(li2) " ";
+        }
+    }
+}
+
+ol:not([class]) {
+    counter-reset: li;
+    & > li:not([class]) {
+        &::before {
+            counter-increment: li;
+            content: counter(li) ".";
+        }
+        & > ul:not([class]) {
+            counter-reset: li2;
+            & > li:not([class]) {
+                &::before {
+                    counter-increment: li2;
+                    content: "";}
+                & > ol:not([class]) {
+                    counter-reset: li3;
+                    & > li:not([class]) {
+                        &::before {
+                            counter-increment: li3;
+                            content: counter(li) "." counter(li2) "."counter(li3) ".";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+li:not([class]) {
+    list-style-type: none;
+}
+
+ul:not([class]) {
+
+    margin: rem(10px);
+    padding-left: rem(20px);
+
+    & > li:not([class]) {
+
+        margin-top: rem(10px);
+        margin-bottom: rem(10px);
+        padding-left: rem(25px);
+
+        &::before {
+
+            width: rem(5px);
+            height: rem(5px);
+            content: '';
+
+            border-radius: $border-radius-huge;
+            background-color: $cerise-red;
+        }
+    }
+
+    & li:not([class]) ul:not([class]) > li:not([class]) {
+        padding-left: rem(32px);
+    }
+}
+
+blockquote {
+    border-left: rem(5px) solid $cerise-red;
+    border-radius: $border-radius-medium;
+    background: $alabaster;
+
+    padding: rem(20px) rem(25px);
+}
+
+a {
+    font-size: $font-size-normal;
+    line-height: $line-height-normal;
+    font-weight: $font-weight-regular;
+
+    color: $color-text-link;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+
+    overflow: hidden;
+    object-fit: cover;
+}
