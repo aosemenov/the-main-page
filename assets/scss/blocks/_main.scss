@@ -1,0 +1,25 @@
+.main {
+  background: $color-background;
+
+  &__notifications{
+    margin-top: rem(40px);
+    width: 100%;
+  }
+
+  &__about {
+    margin-top: rem(40px);
+    padding: 0 $container-horizontal-padding-mobile;
+  }
+
+  &__tabs{
+    margin-top: rem(40px);
+    padding: 0 $container-horizontal-padding-mobile;
+  }
+
+  &__cards{
+    margin-top: rem(20px);
+    margin-bottom: rem(100px);
+    padding: 0 rem(10px);
+
+  }
+}
