@@ -2,24 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Главная страница">
+    <meta name="Main" content="MainContent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <script src="public/js/script.js" type="text/javascript"></script>
 </head>
+
 <body>
-<header>
+<header class="header header--maket">
 
 </header>
-<main>
-	<div class="my-block">
-	    <h1>Hello, QSOFT</h1>
-	    <h1><a href="markup.html">__NEXT</a></h1>
-	</div>
+<main class="main">
+    <div class="main__notifications notifications">
+        <div class="notifications__item">
+            <div class="card card--notification">
+                <div class="card-notification__inner">
+                    <div class="card-notification__header"></div>
+                    <div class="card-notification__body"></div>
+                    <div class="card-notification__footer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="notifications__item">
+            <div class="card card--notification">
+                <div class="card-notification__inner">
+                    <div class="card-notification__header"></div>
+                    <div class="card-notification__body"></div>
+                    <div class="card-notification__footer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="notifications__item">
+            <div class="card card--notification">
+                <div class="card-notification__inner">
+                    <div class="card-notification__header"></div>
+                    <div class="card-notification__body"></div>
+                    <div class="card-notification__footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main__about">
+        <div class="about">
+            <div class="about__container">
+                <div class="about__header">
+                </div>
+                <div class="about__body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main__tabs">
+        <div class="tabs">
+            <div class="tabs__item tabs--active">
+            </div>
+            <div class="tabs__item">
+            </div>
+        </div>
+    </div>
+
+    <div class="main__cards">
+        <div class="cards cards--news" id="news">
+
+            <div class="cards__column">
+                <div class="card card--news">
+                </div>
+            </div>
+
+            <div class="cards__column">
+                <div class="card card--news">
+                </div>
+            </div>
+
+            <div class="cards__column-lg">
+                <div class="card card--news card--news-lg">
+                </div>
+            </div>
+
+            <div class="cards__column">
+                <div class="card card--news">
+                </div>
+            </div>
+
+            <div class="cards__column">
+                <div class="card card--news">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cards cards--promotions" id="promotions">
+
+            <div class="card card--promotions">
+            </div>
+
+            <div class="card card--promotions">
+            </div>
+
+            <div class="card card--promotions">
+            </div>
+
+        </div>
+
+        <div class="cards__button">
+            <button class="button button--filled button--icon">
+                <span>Смотреть еще</span>
+                <svg class="icon icon--arrow">
+                    <use xlink:href="public/images/icons/sprite.svg#icon-arrow"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
 </main>
-<footer>
+
+<footer class="footer footer--maket">
 
 </footer>
+
+<script src="public/js/script.js" type="text/javascript"></script>
 </body>
+
 </html>

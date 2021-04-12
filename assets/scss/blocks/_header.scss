@@ -1,0 +1,12 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  box-shadow: $box-shadow-header;
+  background: $curious-blue;
+
+  &--maket{
+    height: rem(105.32px);
+  }
+}
