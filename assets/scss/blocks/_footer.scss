@@ -1,8 +1,44 @@
 .footer {
   box-shadow: $box-shadow-footer;
-  background: $curious-blue;
+  background: $color-background-light;
 
-  &--maket{
-    height: rem(274.1px);
+  &__row{
+    display:flex;
+    flex-flow: column;
+
+    padding: rem(20px)
+
   }
+  &__column-1{
+    display:flex;
+    justify-content: center;
+
+  }
+  &__icons{
+    display:flex;
+
+  }
+  &__column-2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: rem(20px) 0;
+    padding: rem(20px) 0;
+    border-top: solid 1px $athens-gray;
+    border-bottom: solid 1px $athens-gray;
+
+  }
+  &__column-3{
+    display:flex;
+    justify-content: center;
+
+  }
+  &__logo{
+
+    & a{
+      color: $color-directory;
+    }
+  }
+
 }

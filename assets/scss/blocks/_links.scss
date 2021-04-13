@@ -1,0 +1,16 @@
+.links{
+  display:flex;
+
+  &--footer{
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__item{
+    margin-bottom:rem(20px);
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

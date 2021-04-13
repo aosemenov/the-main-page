@@ -1,21 +1,38 @@
 .header {
-    position: sticky;
+    position: fixed;
+    left: 0;
     top: 0;
     z-index: 1;
 
-    height: rem(105.32px);
+    height: rem(64.32px);
     width: 100%;
 
-    box-shadow: $box-shadow-header;
     background: $color-background-light;
 
-    &__row{
-        height: rem(64.32px);
-        width: 100%;
+    @media (#{$screen-tablet}){
+        box-shadow: $box-shadow-header;
 
+        height: rem(80px);
+    }
+
+
+    &__row{
         display:flex;
         flex-flow: row wrap;
         justify-content: space-between;
+
+        height: 100%;
+        width: 100%;
+
+        @media (#{$screen-tablet}){
+
+            flex-flow: row nowrap;
+        }
+        @media (#{$screen-tablet}){
+            box-shadow: $box-shadow-header;
+
+            height: rem(80px);
+        }
     }
 
     &__column-1{
@@ -25,7 +42,13 @@
         padding-left:rem(20.54px);
 
         height: 100%;
-        width: 50%;
+        width: 100%;
+        max-width: rem(156.54px);
+
+        @media (#{$screen-desktop}){
+            max-width: rem(236px);
+            padding-left:rem(100px);
+        }
     }
 
     &__column-2{
@@ -33,13 +56,38 @@
         order: 3;
 
         width: 100%;
+        box-shadow: $box-shadow-header;
+
+        @media (#{$screen-tablet}){
+
+            box-shadow: none;
+            width: 100%;
+
+            padding: 0 rem(50px);
+            order:2;
+        }
+
+        @media (#{$screen-desktop}){
+            padding: 0 rem(60px);
+        }
     }
 
     &__column-3{
         display: flex;
         order: 2;
 
-        margin-right: rem(20.54px);
+        padding-right: rem(20.54px);
         height: 100%;
+
+        @media (#{$screen-tablet}){
+
+            order:3;
+
+        }
+
+        @media (#{$screen-desktop}){
+            padding-right:rem(100px);
+        }
+
     }
 }
