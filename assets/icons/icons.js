@@ -17,3 +17,4 @@ import './svg/question.svg';
 import './svg/menu.svg';
 import './svg/close.svg';
 import './svg/arrow.svg';
+import './svg/userpic.svg';

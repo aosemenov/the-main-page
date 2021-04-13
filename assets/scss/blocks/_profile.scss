@@ -1,3 +1,75 @@
-.profile {
+//.profile {
+//  &__name {
+//    font-size: $font-size-average;
+//    line-height: $line-height-default;
+//
+//    display: none;
+//
+//    overflow: hidden;
+//
+//    width: 5rem;
+//    margin: 0 rem(10px) 0 rem(19px);
+//
+//    white-space: nowrap;
+//    text-overflow: ellipsis;
+//    cursor: pointer;
+//
+//    color: $cerise-red;
+//
+//    &:hover {
+//      color: $color-text;
+//    }
+//  }
+//
+//  &__avatar {
+//    overflow: hidden;
+//
+//    width: rem(40px);
+//    height: rem(40px);
+//
+//    border-radius: 50%;
+//  }
+//
+//  @media #{$screen-desktop} {
+//    &__name {
+//      display: inline-block;
+//      text-align: start;
+//    }
+//  }
+//}
+.profile{
+    cursor: pointer;
 
+    height: 100%;
+    display:flex;
+    align-items: center;
+
+    &__avatar{
+        display: none;
+    }
+
+    &__user-name{
+        display: none;
+    }
+    &__text{
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.875em;
+        line-height: 120%;
+        color: #768298;
+        text-align: right;
+        letter-spacing: 0.03em;
+    }
+    &__link{
+        display:flex;
+        align-items:center;
+
+        & svg{
+            color: $curious-blue;
+        }
+
+
+
+    }
 }
