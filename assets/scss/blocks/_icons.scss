@@ -1,0 +1,16 @@
+.icons{
+
+  &__item{
+
+    & a {
+      color: $color-directory;
+    }
+
+    &:first-child{
+      margin-right: rem(23px);
+    }
+  }
+  &__link{
+    display:flex;
+  }
+}
