@@ -1,9 +1,9 @@
-.logo{
-    display:flex;
+.logo {
+    display: flex;
     align-items: center;
 
-    &__link{
-        display:flex;
-
+    &__link {
+        color: $color-directory;
+        display: flex;
     }
 }

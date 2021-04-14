@@ -26,7 +26,6 @@
 * Components
 */
 //  Пример подключения стилей блоков
-@import "blocks/my-block";
 @import "blocks/icon";
 @import "blocks/title";
 @import "blocks/link";
@@ -44,5 +43,6 @@
 @import "blocks/search-form";
 @import "blocks/icons";
 @import "blocks/links";
+@import "blocks/container";
 
 

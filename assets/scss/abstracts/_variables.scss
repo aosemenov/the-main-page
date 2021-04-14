@@ -80,23 +80,28 @@ $screen-desktop: "min-width: 1280px";
 * Layout
 */
 $container-width-mobile: 335px;
-$container-horizontal-padding-mobile: 20px;
+$container-horizontal-padding-mobile:20px;
 
 $container-width-table: 650px;
 $container-horizontal-padding-tablet: 59px;
 
 $container-width-desktop: 1240px;
 $container-horizontal-padding-desktop: 100px;
+$container-horizontal-margin-auto: 0 auto;
 
+$container-min-width-html: 375px;
 /**
 * Sizes
 */
+
 $window-width-tablet: 768px;
 $window-width-mobile: 375px;
 
 $button-lg-padding: 10px 30px;
 $button-xs-padding: 6px 30px;
 
+$footer-desktop-height: 102px;
+$footer-mobile-height: 274px;
 
 $input-height: 50px;
 $input-lg-height: 100px;

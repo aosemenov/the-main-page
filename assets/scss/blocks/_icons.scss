@@ -1,16 +1,17 @@
 .icons{
+  $margin: 23px;
+
+  display: flex;
 
   &__item{
-
-    & a {
-      color: $color-directory;
-    }
-
     &:first-child{
-      margin-right: rem(23px);
+      margin-right: rem($margin);
     }
   }
+
   &__link{
     display:flex;
+
+    color: $color-directory;
   }
 }
