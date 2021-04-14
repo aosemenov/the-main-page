@@ -1,11 +1,13 @@
 .link {
     @include text-small;
-    @include title($font-family-custom, $font-weight-regular, $line-height-medium);
+    @include title($font-family-custom, $font-weight-regular, $line-height-normal);
 
     color: $color-text-link;
     text-decoration: none;
 
     cursor: pointer;
+
+    display:flex;
 
     &:hover {
         text-decoration: underline;

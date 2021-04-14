@@ -1,44 +1,93 @@
 .footer {
-  box-shadow: $box-shadow-footer;
+  $padding: 20px;
+  $margin: 20px;
+
+  position: static;
+
   background: $color-background-light;
+  box-shadow: $box-shadow-header;
+
+  min-width: rem($container-min-width-html);
+  width: 100%;
+
+  height: rem($footer-mobile-height);
+
+  @media (#{$screen-tablet}){
+    height: rem($footer-desktop-height);
+  }
+
+
+  &__container{
+    margin: $container-horizontal-margin-auto;
+    padding: 0 rem($container-horizontal-padding-mobile);
+
+    height: 100%;
+
+    @media (#{$screen-desktop}){
+      padding: 0 rem($container-horizontal-padding-desktop);
+    }
+  }
 
   &__row{
     display:flex;
     flex-flow: column;
 
-    padding: rem(20px)
+    height: 100%;
+    width: 100%;
 
+    padding: rem($padding) 0;
+
+    @media (#{$screen-tablet}){
+      flex-flow: row nowrap;
+      align-items: center;
+    }
   }
+
   &__column-1{
-    display:flex;
+
+    display: flex;
     justify-content: center;
 
-  }
-  &__icons{
-    display:flex;
+    @media (#{$screen-desktop}){
+      padding-right: rem(2 * $padding);
+    }
 
   }
   &__column-2{
+    $border-height: 40px;
+    $border-default: solid 1px $athens-gray;
+
     display:flex;
     justify-content: center;
     align-items: center;
 
-    margin: rem(20px) 0;
-    padding: rem(20px) 0;
-    border-top: solid 1px $athens-gray;
-    border-bottom: solid 1px $athens-gray;
+    margin: rem($margin) 0;
+    padding: rem($padding) 0;
+
+    border-top: $border-default;
+    border-bottom: $border-default;
+
+    @media (#{$screen-tablet}){
+      @include indentation-zero;
+
+      justify-content: flex-start;
+
+      width: 100%;
+
+      padding-left: rem(2 * $padding);
+
+      border: none;
+    }
+
+    @media (#{$screen-desktop}){
+      height: rem($border-height);
+      border-left: $border-default;
+    }
+
 
   }
   &__column-3{
     display:flex;
     justify-content: center;
-
   }
-  &__logo{
-
-    & a{
-      color: $color-directory;
-    }
-  }
-
 }

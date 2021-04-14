@@ -13,13 +13,15 @@
 html {
     font-family: $font-family-default;
     font-size: 100%;
-
     color: $color-text;
+
     background-color: $color-background;
+
 }
 
 body {
     @include indentation-zero;
+
     $font-size: $font-size-medium;
 
     font-size: rem($font-size);

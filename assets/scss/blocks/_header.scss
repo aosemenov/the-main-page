@@ -29,7 +29,6 @@
             flex-flow: row nowrap;
         }
         @media (#{$screen-tablet}){
-            box-shadow: $box-shadow-header;
 
             height: rem(80px);
         }
