@@ -27,6 +27,10 @@
     margin-top: $vertical-margin;
     margin-bottom: $vertical-margin;
 }
+@mixin horizontal-margin($horizontal-margin-left, $horizontal-margin-right) {
+    margin-left: $horizontal-margin-left;
+    margin-right: $horizontal-margin-right;
+}
 
 @mixin text-biggest{
     font-size:$font-size-biggest;
