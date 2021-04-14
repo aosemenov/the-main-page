@@ -49,7 +49,6 @@
 	}
 	&--unfilled{
 		background: none;
-
 		color: $curious-blue;
 
 		&:hover {
@@ -64,20 +63,12 @@
 		&:disabled {
 			color: $heather;
 		}
-	}
-	&--unfilled-default{
-		$line-height: rem(15px);
 
-		@include title($font-family-custom-medium, $font-weight-medium, $line-height);
-
-	}
-
-	&--unfilled-small{
-		$font-family: Roboto, sans-serif;
-
-		@include title($font-family, $font-weight-medium, 1.3);
-
+		&-default{
+			@include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
+		}
 	}
 }
+
 
 
