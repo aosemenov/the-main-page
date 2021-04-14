@@ -13,7 +13,7 @@
     <div class="header__container container">
         <div class="header__row">
             <div class="header__column-1">
-                <div class="header__logo logo">
+                <div class="logo">
                     <a class="logo__link" href="#">
                         <svg class="icon icon--logo">
                             <use xlink:href="public/images/icons/sprite.svg#icon-logo"></use>
@@ -22,29 +22,32 @@
                 </div>
             </div>
             <div class="header__column-2">
-                <form class="header__search-form search-form" action="">
+                <form class="search-form" action="">
                     <input class="search-form__input" type="text" placeholder="Найти...">
                     <div class="search-form__icon">
                         <button class="search-form__icon-submit" >
-                            <svg class=" icon icon--search">
+                            <svg class="icon icon--search">
                                 <use xlink:href="public/images/icons/sprite.svg#icon-search"></use>
                             </svg>
                         </button>
                     </div>
-
                 </form>
             </div>
             <div class="header__column-3">
-                <div class="header__profile profile">
+                <div class="profile">
                     <div class="profile__user-name">
-                        <span class="profile__text">Константинвфывфывыф</span>
+                        <span class="profile__text">Константин</span>
                     </div>
                     <div class="profile__icon">
                         <a class="profile__link" href="#">
-                            <svg class="profile__avatar icon icon--userpic">
-                                <use xlink:href="public/images/icons/sprite.svg#icon-userpic"></use>
-                            </svg>
-                            <svg class="profile__avatar-mobile icon icon--profile">
+                            <img class="profile__avatar" src="public/images/avatar.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="profile-mobile">
+                    <div class="profile-mobile__icon">
+                        <a class="profile-mobile__link" href="#">
+                            <svg class="profile-mobile__icon-mobile icon icon--profile">
                                 <use xlink:href="public/images/icons/sprite.svg#icon-profile"></use>
                             </svg>
                         </a>

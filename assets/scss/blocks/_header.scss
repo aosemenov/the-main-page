@@ -1,10 +1,16 @@
 .header {
+    $width-logo: 30px;
+    $vertical-padding: 17px;
+    $horizontal-padding: 20px;
+    $input-horizontal-padding-tablet: 50px;
+    $input-horizontal-padding-desktop: 60px;
+
     position: fixed;
     left: 0;
     top: 0;
+
     z-index: 1;
 
-    height: rem(64.32px);
     width: 100%;
 
     background: $color-background-light;
@@ -12,41 +18,46 @@
     @media (#{$screen-tablet}){
         box-shadow: $box-shadow-header;
 
-        height: rem(80px);
+        height: rem($header-desktop-height);
     }
 
+    &__container{
+        margin: $container-horizontal-margin-auto;
 
+        height: 100%;
+
+        @media (#{$screen-desktop}){
+            padding: 0 rem($container-horizontal-padding-desktop);
+        }
+
+    }
     &__row{
         display:flex;
         flex-flow: row wrap;
         justify-content: space-between;
 
-        height: 100%;
         width: 100%;
+        height: rem( $width-logo + 2 * $vertical-padding );
 
         @media (#{$screen-tablet}){
-
             flex-flow: row nowrap;
         }
-        @media (#{$screen-tablet}){
 
-            height: rem(80px);
+        @media (#{$screen-tablet}){
+            height: rem($header-desktop-height);
         }
+
     }
 
     &__column-1{
         display:flex;
         order: 1;
+        align-items: center;
 
-        padding-left:rem(20.54px);
-
-        height: 100%;
-        width: 100%;
-        max-width: rem(156.54px);
+        padding-left:rem($horizontal-padding);
 
         @media (#{$screen-desktop}){
-            max-width: rem(236px);
-            padding-left:rem(100px);
+            padding: 0;
         }
     }
 
@@ -55,38 +66,37 @@
         order: 3;
 
         width: 100%;
+
         box-shadow: $box-shadow-header;
 
         @media (#{$screen-tablet}){
-
             box-shadow: none;
-            width: 100%;
 
-            padding: 0 rem(50px);
+            width: 100%;
+            padding: 0 rem($input-horizontal-padding-tablet);
+
             order:2;
         }
 
         @media (#{$screen-desktop}){
-            padding: 0 rem(60px);
+            padding: 0 rem($input-horizontal-padding-desktop);
         }
     }
 
     &__column-3{
         display: flex;
+        align-items: center;
         order: 2;
 
-        padding-right: rem(20.54px);
+        padding-right: rem($horizontal-padding);
         height: 100%;
 
         @media (#{$screen-tablet}){
 
             order:3;
-
         }
-
         @media (#{$screen-desktop}){
-            padding-right:rem(100px);
+            padding: 0;
         }
-
     }
 }
