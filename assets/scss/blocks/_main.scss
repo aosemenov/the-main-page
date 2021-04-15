@@ -1,5 +1,13 @@
 .main {
   background: $color-background;
+
+  min-height: calc(100vh - 374px);
+  margin-bottom: rem(100px);
+
+  @media (#{$screen-tablet}){
+    min-height: calc(100vh - 202px);
+  }
+
   &__container{
     margin: $container-horizontal-margin-auto;
 
