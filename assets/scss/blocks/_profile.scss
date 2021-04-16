@@ -2,20 +2,17 @@
     cursor: pointer;
 
     height: 100%;
-
-    display:none;
+    display:flex;
     align-items: center;
 
     @media (#{$screen-tablet}){
         border-left: solid 1px $athens-gray;
 
-        display:flex;
     }
 
     &__avatar{
         $avatar-size: 40px;
 
-        display: none;
         border-radius: 50%;
         overflow: hidden;
         object-fit: cover;
@@ -23,9 +20,6 @@
         width: rem($avatar-size);
         height: rem($avatar-size);
 
-        @media (#{$screen-tablet}){
-            display: block;
-        }
     }
 
     &__user-name{
