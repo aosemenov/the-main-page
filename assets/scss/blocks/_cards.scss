@@ -1,8 +1,12 @@
 .cards{
-  display:flex;
   flex-flow: row wrap;
   justify-content: center;
 
+  display:none;
+  &--active{
+    display:flex;
+
+  }
   &__column{
     flex: 1 0 rem(335px);
     padding: rem(10px);

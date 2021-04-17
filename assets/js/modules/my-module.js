@@ -1,22 +1,24 @@
 // Пример организации модуля
 const ELEMENTS_SELECTOR = {
-    myModule: '[my-module]',
-    myModuleTitle: '[my-module-title]',
-    myModuleBody: '[my-module-body]',
+    tabsItem: '.tabs__item',
+    tabsName: '.tabs__name',
+    cards: '.cards',
 };
 
 const CLASSES = {
-    someElementOpened: 'some-element-class--opened',
-    anotherElementDisabled: 'another-elemetn-class--disabled',
+    someTabsActive: 'tabs__item--active',
+    someCardsActive: 'cards--active',
 };
 
 export default function () {
-    $(document).on('click', ELEMENTS_SELECTOR.myModuleTitle, handleTitleClick);
+    $(document).on('click', ELEMENTS_SELECTOR.tabsName, handleTitleClick);
 
     function handleTitleClick() {
-        const $myModuleTitle = $(this);
-        const $myModule = $myModuleTitle.closest(ELEMENTS_SELECTOR.myModule);
-
-        $myModule.toggleClass(CLASSES.someElementOpened);
+        const $tabsName = $(this);
+        const $tabsItem = $tabsName.closest(ELEMENTS_SELECTOR.tabsItem);
+        $tabsItem.addClass(CLASSES.someTabsActive).siblings().removeClass(CLASSES.someTabsActive);
+        const $indexCards = $tabsItem.index();
+        const $cards = $(ELEMENTS_SELECTOR.cards).eq($indexCards);
+        $cards.addClass(CLASSES.someCardsActive).siblings().removeClass(CLASSES.someCardsActive);
     }
 }
