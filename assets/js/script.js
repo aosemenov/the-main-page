@@ -11,13 +11,13 @@ window.$ = $;
  * Modules
  */
 // Пример подключения модуля
-// import myModule from './modules/my-module-function';
+import handleTitleClick from './modules/my-module';
 
 const app = {
     ready() {
         // Пример вызова импортированнывх функций
         // pluginName();
-
+        handleTitleClick();
         // myModule();
     },
 

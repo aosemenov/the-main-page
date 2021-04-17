@@ -1,5 +1,29 @@
 .about{
-  height: rem(300px);
+  $about-width: 600px;
+  $margin: 10px;
 
-  background: $curious-blue;
+  max-width: rem($about-width);
+
+  @media (#{$screen-desktop}){
+    max-width: calc(50% + 1px);
+  }
+  &__body{
+    margin-top: rem(2*$margin);
+  }
+  &__title-header{
+    @include indentation-zero;
+    @include text-huge;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-normal);
+  }
+  &__title-body{
+    @include indentation-zero;
+    @include text-average;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
+
+  }
+  &__text{
+    @include vertical-margin(rem($margin), 0);
+    @include title($font-family-custom, $font-weight-regular, $line-height-medium);
+    @include text-small;
+  }
 }
