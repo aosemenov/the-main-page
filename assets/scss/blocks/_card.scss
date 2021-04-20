@@ -114,7 +114,7 @@
   }
 
   &--prom &{
-     $prom-text-max-width: 600px;
+    $prom-text-max-width: 600px;
 
     &__calendar{
       display:flex;
@@ -179,7 +179,7 @@
 
       @media (#{$screen-tablet}) {
         max-width: rem(392px);
-        flex: 1 0 rem(299px);
+        flex: 1 0 rem(229px);
         height: 100%;
       }
     }
@@ -212,17 +212,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: rem(35px);
     height: rem(35px);
 
     border-radius: 0 rem($border-radius-medium) 0 rem($border-radius-large);
 
-    color: $curious-blue;
     background: $color-background-light;
 
     right: 0;
     top: 0;
+
+    &:hover &{
+      &:hover & {
+        &__title, &__text {
+          &--blue{
+            color: red;
+          }
+        }
+      }
+    }
   }
 
   &__image {
@@ -296,4 +304,5 @@
 
     @include number-rows-max(2);
   }
+
 }
