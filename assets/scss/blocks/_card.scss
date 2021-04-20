@@ -1,18 +1,299 @@
-.card{
+.card {
+  $line-height: 21px;
+  $icon-margin: 6px;
+  $margin: 10px;
+  $padding: 20px;
+
   cursor: pointer;
 
+  overflow: hidden;
+
+  width: 100%;
   background: $color-background-light;
-  filter: drop-shadow(0px 12px 40px rgba(0, 0, 0, 0.03));
+  border-radius: $border-radius-medium;
+  filter: drop-shadow(0px 12px 40px rgba(0, 0, 0, 0.03)) drop-shadow(0px 3px 10px rgba(164, 164, 164, 0.03));
 
-  border-radius:$border-radius-medium;
-
-  &--notification{
-    width: rem(286px);
-    height: rem(150px);
+  &:hover {
+    filter: drop-shadow(-3px 0px 40px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 10px rgba(164, 164, 164, 0.03));
   }
 
-  &--news{
+  &:hover & {
+    &__title, &__text {
+      &--blue{
+        color: $color-text-link;
+      }
+    }
+  }
+
+  &--news & {
+    $news-text-max-width: 227px;
+
+    @media (#{$screen-tablet}) {
+
+      &__content {
+        height: rem(151px);
+        padding: rem(10px) rem(40.5px) 0 rem(20.5px);
+      }
+      &__inner {
+        height: rem($card-news-max-width);
+      }
+      &__footer {
+        height: rem(42px);
+      }
+    }
+
+    &__title {
+
+
+      @media (#{$screen-tablet}) {
+        @include text-medium;
+
+        max-width: rem($news-text-max-width);
+      }
+    }
+    &__text {
+      @media (#{$screen-tablet}) {
+
+        -webkit-line-clamp: 3;
+
+        height: rem(3 * $line-height);
+        max-width: rem($news-text-max-width);
+      }
+    }
+  }
+  &--bg, &--bg &{
+    $bg-text-max-width: 524px;
+    $padding-top: 146px;
+
+    height: 100%;
+
+    &__header{
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+    &__inner{
+      background: rgba(18, 25, 32, .7);
+      &:hover{
+        background: rgba(18, 25, 32, .9);
+      }
+    }
+    &__star{
+      background: none;
+    }
+    &__image{
+      @media (#{$screen-tablet}){
+        padding-right: rem(42px);
+      }
+    }
+    &__content{
+      padding: rem($padding-top) rem($padding) rem(23px) rem($padding);
+
+      @media (#{$screen-tablet}) {
+        height: 100%;
+        padding: rem($padding-top + $padding) rem($padding) 0 rem($padding);
+      }
+    }
+    &__footer, &__text, &__title{
+      color: $color-background-light;
+    }
+    &__text, &__title {
+      max-width: rem($bg-text-max-width);
+    }
+    &__text {
+      min-height: rem(5 * $line-height);
+    }
+  }
+
+  &--right &{
+    &__header{
+      @media (#{$screen-tablet}) {
+        order: 1;
+      }
+    }
+  }
+
+  &--prom &{
+     $prom-text-max-width: 600px;
+
+    &__calendar{
+      display:flex;
+    }
+    &__separator{
+      display:none;
+
+      @include text-little;
+      color: $color-directory;
+      line-height: $line-height-little;
+
+      margin: 0 rem(5px);
+    }
+    &__status{
+      display:none;
+    }
+
+    @media (#{$screen-tablet}) {
+      &__status{
+        display:block;
+      }
+      &__separator{
+        display:block;
+      }
+      &__inner{
+        display:flex;
+        height: rem($card-prom-max-width);
+      }
+      &__content {
+        height: rem(175px);
+        padding: 0;
+      }
+      &__body{
+        flex: 1 0 rem(499px);
+
+        padding:rem(15px) rem($padding) ;
+      }
+      &__star{
+        position: relative;
+
+        width: rem(24px);
+        height: rem(24px);
+      }
+      &__footer {
+        line-height: $line-height-little;
+
+        height: auto;
+        padding: 0;
+      }
+      &__text{
+        max-width: rem($prom-text-max-width);
+        -webkit-line-clamp: 3;
+      }
+    }
+
+    &__title {
+      max-width: rem($prom-text-max-width);
+    }
+
+    &__header{
+      height: rem(205px);
+
+      @media (#{$screen-tablet}) {
+        max-width: rem(392px);
+        flex: 1 0 rem(299px);
+        height: 100%;
+      }
+    }
+
+    &__icon:nth-child(2){
+      display: none;
+    }
+  }
+
+  &__inner {
+    position: relative;
+
     width: 100%;
-    height: rem(352px);
+    height: 100%;
+  }
+
+  &__header {
+    width: 100%;
+    height: rem(159px);
+
+    position: relative;
+  }
+
+  &__content {
+    padding: rem($padding);
+  }
+
+  &__star {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: rem(35px);
+    height: rem(35px);
+
+    border-radius: 0 rem($border-radius-medium) 0 rem($border-radius-large);
+
+    color: $curious-blue;
+    background: $color-background-light;
+
+    right: 0;
+    top: 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: rem(44px);
+    padding: 0 rem($padding);
+
+    @include title($font-family-custom, $font-weight-regular, $line-height-bottom);
+    @include text-little;
+
+    color: $color-text-secondary;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+
+    margin-left: rem(2 * $icon-margin);
+  }
+
+  &__icon-text {
+    margin-left: rem($icon-margin);
+  }
+
+  &__links{
+    display:none;
+    @media (#{$screen-tablet}) {
+      display:flex;
+      align-items: center;
+    }
+  }
+
+  &__info{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem($margin);
+  }
+
+  &__text {
+    @include vertical-margin(rem($margin), 0);
+
+    @include title($font-family-custom, $font-weight-regular, $line-height-default);
+    @include text-small;
+
+    @include number-rows-max(5);
+
+    color: $color-text-secondary;
+  }
+
+  &__title {
+    @include indentation-zero;
+
+    @include text-normal;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-default);
+
+    @include number-rows-max(2);
   }
 }
