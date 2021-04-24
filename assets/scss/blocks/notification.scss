@@ -1,0 +1,52 @@
+.notification{
+  $padding: 16px;
+  $margin: 10px;
+
+  width: rem($notification-card-width);
+  height: rem($notification-card-height);
+
+  background: $color-background-light;
+
+  &__header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: rem($padding) rem($padding) 0 rem($padding);
+  }
+
+  &__icon{
+    display:flex;
+    align-items: center;
+  }
+
+  &__body{
+    $line-height: 17px;
+
+    padding: 0 rem($padding);
+    margin: rem($margin) 0 rem(2 * $margin) 0;
+    height: rem(3 * $line-height);
+  }
+
+  &__text{
+    @include text-small;
+    @include title($font-family-custom, $font-weight-regular, $line-height-little);
+    @include indentation-zero;
+    @include number-rows-max(3);
+    letter-spacing: em(0.01);
+  }
+
+  &__title{
+    @include indentation-zero;
+    @include text-normal;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-default);
+    @include number-rows-max(1);
+  }
+
+  &__footer{
+    display:flex;
+    justify-content: flex-end;
+
+    height: auto;
+  }
+}

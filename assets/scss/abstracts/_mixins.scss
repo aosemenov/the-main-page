@@ -55,3 +55,10 @@
   font-weight: $font-weight;
   line-height: $line-height;
 }
+@mixin number-rows-max($number){
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+}

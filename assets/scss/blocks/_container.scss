@@ -1,8 +1,5 @@
 .container{
   box-sizing: content-box;
-
-  min-width: $container-width-mobile;
-
   @media (#{$screen-desktop}){
     max-width: $container-width-desktop;
   }
