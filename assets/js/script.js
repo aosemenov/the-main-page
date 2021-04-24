@@ -6,19 +6,17 @@ window.$ = $;
 
 // Пример подключения плагина
 // import pluginName from 'plugin-name';
-
+import 'slick-carousel/slick/slick.min';
 /**
  * Modules
  */
-// Пример подключения модуля
 import handleTitleClick from './modules/my-module';
+import slickSlider from './modules/slick-slider';
 
 const app = {
     ready() {
-        // Пример вызова импортированнывх функций
-        // pluginName();
         handleTitleClick();
-        // myModule();
+        slickSlider();
     },
 
     load() {

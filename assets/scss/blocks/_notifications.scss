@@ -1,22 +1,29 @@
 .notifications {
-  display: flex;
-  overflow: scroll;
+  width: 100%;
 
+  display:flex;
+  overflow-x: auto;
 
-  &__item {
-    padding-right: rem(30px);
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 
-    &:last-child {
+  &__item{
+    margin-right: rem($slider-margin-mobile);
+
+    &:last-child{
+      margin-right: 0;
       padding-right: rem(20px);
     }
 
-    &:first-child {
-      padding-left: rem(20px);
+    @media (#{$screen-desktop}){
+      margin-right: rem($slider-margin-desktop);
 
-      @media (#{$screen-desktop}){
-        padding-left: 0;
-      }
-
+      &:last-child{
+        padding-right: 0;
     }
+   }
   }
 }
+

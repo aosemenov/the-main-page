@@ -2,6 +2,7 @@
   background: $color-background;
 
   min-height: calc(100vh - 274px);
+  min-width: $container-min-width-html;
 
   @media (#{$screen-tablet}){
     min-height: calc(100vh - 102px);
@@ -18,15 +19,29 @@
 
   }
   &__notifications{
-    margin-top: rem(145px);
     width: 100%;
+    padding-left: rem(20px);
+    margin-top: rem(145px);
+
+    @media (#{$screen-tablet}){
+      margin-top: rem(130px);
+    }
+
+    @media (#{$screen-desktop}){
+      padding: 0;
+    }
   }
 
   &__about {
     margin-top: rem(40px);
     padding: 0 $container-horizontal-padding-mobile;
 
+    @media (#{$screen-tablet}){
+      margin-top: rem(50px);
+    }
+
     @media (#{$screen-desktop}){
+      margin-top: rem(31px);
       padding: 0 ;
     }
   }

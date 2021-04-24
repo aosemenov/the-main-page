@@ -1,4 +1,6 @@
 .button {
+	$padding: 15px;
+
 	@include text-small;
 	text-decoration: none;
 	border: 0;
@@ -15,7 +17,7 @@
 
 		border-radius: $border-radius-medium;
 
-		padding: rem(17.5px) rem(30px);
+		padding: rem(17.5px) rem(2*$padding);
 		color: $white;
 		background-color: $curious-blue;
 
@@ -43,13 +45,17 @@
 	&--half-rounded {
 		@include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
 
-		padding: rem(6px) rem(30px);
+		padding: rem(6px) rem(2*$padding);
 
 		border-radius: $border-radius-medium 0 $border-radius-medium 0;
 	}
 	&--unfilled{
 		background: none;
 		color: $curious-blue;
+
+		@include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
+
+		padding: 0 rem($padding) 0 0;
 
 		&:hover {
 			color: $wild-blue-yonder;
@@ -64,9 +70,6 @@
 			color: $heather;
 		}
 
-		&-default{
-			@include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
-		}
 	}
 }
 

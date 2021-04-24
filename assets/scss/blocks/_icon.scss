@@ -52,6 +52,8 @@
 		width: rem(24px);
 		height: rem(24px);
 
+		color:$color-text-link;
+
 		&-important{
 			color: $color-info-icon;
 		}
@@ -78,8 +80,9 @@
 
 
 	&--question {
-		width: rem(20px);
-		height: rem(20px);
+		width: rem(24px);
+		height: rem(24px);
+		color:$wild-blue-yonder;
 	}
 
 	&--search {
