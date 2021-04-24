@@ -44,11 +44,17 @@
 @mixin text-average{
     font-size: $font-size-average;
 }
+@mixin text-medium{
+    font-size: $font-size-medium;
+}
 @mixin text-normal{
     font-size: $font-size-normal;
 }
 @mixin text-small{
     font-size: $font-size-small;
+}
+@mixin text-little{
+    font-size: $font-size-little;
 }
 @mixin title($font-family, $font-weight, $line-height) {
   font-family:$font-family;
@@ -62,3 +68,4 @@
     -webkit-line-clamp: $number;
     -webkit-box-orient: vertical;
 }
+

@@ -9,6 +9,10 @@
 
     display:flex;
 
+    &--small{
+        @include title($font-family-custom, $font-weight-regular, $line-height-little);
+        @include text-little;
+    }
     &:hover {
         text-decoration: underline;
     }
