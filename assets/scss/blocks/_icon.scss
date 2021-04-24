@@ -45,7 +45,7 @@
 	}
 	&--eye {
 		width: rem(15px);
-		height: rem(8px);
+		height: rem(10px);
 	}
 
 	&--info {
@@ -86,11 +86,36 @@
 		width: rem(24px);
 		height: rem(24px);
 	}
-
 	&--star {
 
-		width: rem(25px);
+		width: rem(24px);
 		height: rem(24px);
+		fill: $color-text-link;
+		color: $color-background-light;
+
+		&:hover{
+			color: rgba(52, 170, 221, .5);
+		}
+
+		&:active{
+			color: $color-text-link;
+		}
+	}
+	&--star-bg {
+
+		width: rem(24px);
+		height: rem(24px);
+
+		fill: $color-background-light;
+		color: rgba(255, 255, 255, 0);;
+
+		&:hover{
+			color: rgba(255, 255, 255, .5);;
+		}
+
+		&:active{
+			color: $color-background-light;
+		}
 	}
 
 	&--youtube {

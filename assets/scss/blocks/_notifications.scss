@@ -14,7 +14,7 @@
       padding-left: rem(20px);
 
       @media (#{$screen-desktop}){
-        padding: 0 ;
+        padding-left: 0;
       }
 
     }
