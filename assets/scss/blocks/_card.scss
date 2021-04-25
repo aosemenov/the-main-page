@@ -1,5 +1,6 @@
 .card {
   $line-height: 21px;
+  $title-line-height: 27px;
   $icon-margin: 6px;
   $margin: 10px;
   $padding: 20px;
@@ -38,12 +39,12 @@
         height: rem($card-news-max-width);
       }
       &__footer {
-        height: rem(42px);
+        height: rem($card-footer-desktop-height);
       }
     }
 
     &__title {
-
+      max-height: rem(2 * $title-line-height);
 
       @media (#{$screen-tablet}) {
         @include text-medium;
@@ -54,9 +55,7 @@
     &__text {
       @media (#{$screen-tablet}) {
 
-        -webkit-line-clamp: 3;
-
-        height: rem(3 * $line-height);
+        max-height: rem(3 * $line-height);
         max-width: rem($news-text-max-width);
       }
     }
@@ -91,17 +90,25 @@
 
       @media (#{$screen-tablet}) {
         height: 100%;
-        padding: rem($padding-top + $padding) rem($padding) 0 rem($padding);
+        padding: rem($padding-top + 23px) rem($padding) 0 rem($padding);
+      }
+    }
+    &__footer{
+
+      @media (#{$screen-tablet}) {
+        height: rem($card-footer-desktop-height);
       }
     }
     &__footer, &__text, &__title{
       color: $color-background-light;
     }
-    &__text, &__title {
+    &__title {
+      max-height: rem(2 * $title-line-height);
       max-width: rem($bg-text-max-width);
     }
     &__text {
-      min-height: rem(5 * $line-height);
+      height: rem(5 * $line-height);
+      max-width: rem($bg-text-max-width);
     }
   }
 
@@ -116,6 +123,12 @@
   &--prom &{
     $prom-text-max-width: 600px;
 
+    &__info{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: rem($margin);
+    }
     &__calendar{
       display:flex;
     }
@@ -166,12 +179,21 @@
       }
       &__text{
         max-width: rem($prom-text-max-width);
-        -webkit-line-clamp: 3;
       }
     }
 
     &__title {
+      max-height: rem(2 * $title-line-height);
       max-width: rem($prom-text-max-width);
+    }
+
+    &__text {
+      max-height: rem(5 * $line-height);
+      max-width: rem($prom-text-max-width);
+
+      @media (#{$screen-tablet}) {
+        max-height: rem(3 * $line-height);
+      }
     }
 
     &__header{
@@ -221,16 +243,6 @@
 
     right: 0;
     top: 0;
-
-    &:hover &{
-      &:hover & {
-        &__title, &__text {
-          &--blue{
-            color: red;
-          }
-        }
-      }
-    }
   }
 
   &__image {
@@ -246,7 +258,7 @@
     justify-content: space-between;
     align-items: center;
 
-    height: rem(44px);
+    height: rem($card-footer-mobile-height);
     padding: 0 rem($padding);
 
     @include title($font-family-custom, $font-weight-regular, $line-height-bottom);
@@ -278,20 +290,11 @@
     }
   }
 
-  &__info{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: rem($margin);
-  }
-
   &__text {
     @include vertical-margin(rem($margin), 0);
 
     @include title($font-family-custom, $font-weight-regular, $line-height-default);
     @include text-small;
-
-    @include number-rows-max(5);
 
     color: $color-text-secondary;
   }
@@ -301,8 +304,6 @@
 
     @include text-normal;
     @include title($font-family-custom-medium, $font-weight-medium, $line-height-default);
-
-    @include number-rows-max(2);
   }
 
 }
