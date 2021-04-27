@@ -22,9 +22,7 @@ html {
 body {
     @include indentation-zero;
 
-    $font-size: $font-size-medium;
-
-    font-size: rem($font-size);
+    font-size: rem($font-size-medium);
     font-weight: $font-weight-regular;
     line-height: $line-height-medium;
 
@@ -55,15 +53,13 @@ h4:not([class]) {
     @include text-average;
     @include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
 
-    margin-bottom: rem(20px);
-    margin-top: 0;
+    margin: rem(20px) 0;
 }
 h5:not([class]){
     @include text-normal;
     @include title($font-family-custom-medium, $font-weight-medium, $line-height-default);
 
-    margin-top: 0;
-    margin-bottom: rem(10px);
+    margin: rem(10px) 0;
 }
 
 
