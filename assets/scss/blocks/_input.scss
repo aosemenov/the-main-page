@@ -71,7 +71,6 @@
       cursor: default;
     }
 
-
     &:focus{
       outline: none;
       border: solid 1px $color-directory-active;
@@ -81,7 +80,7 @@
       color: $color-directory;
     }
 
-    &[type=text]{
+    &[type=text], &[type=email], &[type=tel]{
       @include text-small;
 
       overflow: hidden;
@@ -90,6 +89,17 @@
 
       padding: rem($input-padding-vertical-placeholder) rem($input-padding-horizontal-placeholder);
     }
+
+    &.error {
+      border: solid 1px $carnation;
+    }
   }
 
+}
+label .error{
+  $line-height: 1.6;
+  @include title($font-family-custom, $font-weight-regular, $line-height);
+
+  color: $carnation;
+  font-size: rem(10px);
 }
