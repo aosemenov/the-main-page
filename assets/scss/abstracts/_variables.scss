@@ -21,6 +21,7 @@ $tapestry:#a7507b;
 $orange-red-craiola:#ff3332;
 $currentColor: #000000;
 $athens-gray: #ebebf1;
+$matterhorn: #4B4B4B;
 
 //dynamic
 $color-text: $bunker;
@@ -50,6 +51,7 @@ $font-size-base: 16px;
 
 $font-path: '../fonts';
 
+$font-weight-bold: 700;
 $font-weight-medium: 500;
 $font-weight-regular: 400;
 
@@ -62,6 +64,7 @@ $font-size-normal: 16px;
 $font-size-small: 14px;
 $font-size-little: 12px;
 
+$line-height-average: 2;
 $line-height-medium: 1.67;
 $line-height-default: 1.5;
 $line-height-normal: 1.3;
@@ -84,12 +87,13 @@ $screen-desktop: "min-width: 1280px";
 */
 $container-width-mobile: 335px;
 $container-horizontal-padding-mobile:20px;
+$container-vertical-padding-mobile:50px;
 
 $container-width-table: 728px;
 $container-horizontal-padding-tablet: 59px;
 
 $container-width-desktop: 1240px;
-$container-horizontal-padding-desktop: 100px;
+$container-horizontal-padding-desktop: 110px;
 $container-horizontal-margin-auto: 0 auto;
 
 $container-min-width-html: 375px;
@@ -110,6 +114,9 @@ $footer-mobile-height: 274px;
 
 $header-desktop-height: 80px;
 
+$input-padding-horizontal-placeholder: 20px;
+$input-padding-vertical-placeholder: 17px;
+$input-width: 335px;
 $input-height: 50px;
 $input-lg-height: 100px;
 $input-search-height: 41px;

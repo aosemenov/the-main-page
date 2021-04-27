@@ -1,0 +1,54 @@
+.check{
+  $root: &;
+
+  $size: 1px;
+  $box-size: 20px;
+
+  display: inline-flex;
+
+  cursor: pointer;
+
+  &__input{
+    position:absolute;
+
+    width: rem($size);
+    height: rem($size);
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    &:checked + #{$root}__box{
+      background: url(../../assets/icons/svg/check.svg) 50% 50% no-repeat $color-text-link;
+    }
+
+    &:disabled + #{$root}__box{
+      background-color: $athens-gray;
+      border: solid rem($size) $color-directory;
+    }
+
+    &:checked:disabled + #{$root}__box{
+      background: url(../../assets/icons/svg/check-disabled.svg) 50% 50% no-repeat $athens-gray;
+      border: solid rem($size) $color-directory;
+    }
+  }
+
+  &__title {
+    $line-height: 20px;
+    $padding: 28px;
+
+    @include text-small;
+    @include title($font-family-custom, $font-weight-regular, $line-height);
+
+    padding-left: rem($padding);
+  }
+  &__box{
+    display: flex;
+    position:absolute;
+
+    width: rem($box-size);
+    height:  rem($box-size);
+
+    border: solid rem($size) $color-text-link;
+    border-radius: $border-radius-small;
+  }
+}

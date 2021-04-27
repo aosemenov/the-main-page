@@ -8,162 +8,373 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 <body>
-<header>
-
-</header>
-<main>
-    <div class="my-block">
-        <h1>Базовые теги</h1>
-        <h4>Заголовки</h4>
-        <h1>Заголовок первого</h1>
-        <p class="title--h1 title">Текст как заголовок</p>
-        <h2>Заголовок второго</h2>
-        <p class="title--h2 title">Текст как заголовок</p>
-        <h3>Заголовок третьего</h3>
-        <p class="title--h3 title">Текст как заголовок</p>
-        <h4>Заголовок четвертого</h4>
-        <p class="title--h4 title">Текст как заголовок</p>
-        <h5>Заголовок пятого</h5>
-        <p class="title--h5 title">Текст как заголовок</p>
-        <h4>Параграфы</h4>
-        <p>Лежа на панцирнотвердой спине, он видел, стоило ему <a>приподнять голову</a>, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот</p>
-        <p>Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах. Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку.</p>
-        <h4>Нумерованные списки</h4>
-        <ol>
-            <li>Список</li>
-            <li>Список</li>
-            <li>Список</li>
-            <li>Привет
-                <ol>
-                    <li>Лежа на панцирнотвердой спине, он видел, стоило ему</li>
-                    <li>Лежа на панцирнотвердой спине, он видел, стоило</li>
-                    <li>Но обычная комната</li>
-                </ol>
-            </li>
-            <li>Список</li>
-        </ol>
-        <h4>Ненумерованные списки</h4>
-        <ul>
-            <li>Список</li>
-            <li>Cписок в списке
-                <ul>
-                    <li>Лежа на панцирнотвердой спине, он видел</li>
-                    <li>Лежа на панцирнотвердой спине, он видел, стоил</li>
-                </ul></li>
-            <li>Список</li>
-        </ul>
-        <h4>Тройная вложенность списков</h4>
-        <ol>
-            <li> Первый список
-                <ul>
-                    <li> Второй список
-                        <ol>
-                            <li>Третий список</li>
-                            <li>Третий список</li>
-                        </ol>
-                    </li>
-                    <li> Второй список
-                        <ol>
-                            <li>Третий список</li>
-                            <li>Третий список</li>
-                            <li>Третий список</li>
-                        </ol>
-                    </li>
-                </ul>
-            </li>
-            <li> Первый список </li>
-        </ol>
-        <h4>Цитата</h4>
-        <blockquote>На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала
-            зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука.
-        </blockquote>
-        <h4>Иконки</h4>
-        <div style="display:flex; align-items: center;">
-            <svg class="icon icon--arrow-right">
-                <use xlink:href="public/images/icons/sprite.svg#icon-arrow-right"></use>
-            </svg>
-            <svg class="icon icon--comment">
-                <use xlink:href="public/images/icons/sprite.svg#icon-comment"></use>
-            </svg>
-            <svg class="icon icon--dropdown-close">
-                <use xlink:href="public/images/icons/sprite.svg#icon-dropdown-close"></use>
-            </svg>
-            <svg class="icon icon--dropdown-open">
-                <use xlink:href="public/images/icons/sprite.svg#icon-dropdown-open"></use>
-            </svg>
-            <svg class="icon icon--close">
-                <use xlink:href="public/images/icons/sprite.svg#icon-close"></use>
-            </svg>
-            <svg class="icon icon--eye">
-                <use xlink:href="public/images/icons/sprite.svg#icon-eye"></use>
-            </svg>
-            <svg class="icon icon--info">
-                <use xlink:href="public/images/icons/sprite.svg#icon-info"></use>
-            </svg>
-            <svg class="icon icon--instagram">
-                <use xlink:href="public/images/icons/sprite.svg#icon-instagram"></use>
-            </svg>
-            <svg class="icon icon--like">
-                <use xlink:href="public/images/icons/sprite.svg#icon-like"></use>
-            </svg>
-            <svg class="icon icon--logo">
-                <use xlink:href="public/images/icons/sprite.svg#icon-logo"></use>
-            </svg>
-            <svg class="icon icon--logo-footer">
-                <use xlink:href="public/images/icons/sprite.svg#icon-logo-footer"></use>
-            </svg>
-            <svg class="icon icon--menu">
-                <use xlink:href="public/images/icons/sprite.svg#icon-menu"></use>
-            </svg>
-            <svg class="icon icon--profile">
-                <use xlink:href="public/images/icons/sprite.svg#icon-profile"></use>
-            </svg>
-            <svg class="icon icon--question">
-                <use xlink:href="public/images/icons/sprite.svg#icon-question"></use>
-            </svg>
-            <svg class="icon icon--search">
-                <use xlink:href="public/images/icons/sprite.svg#icon-search"></use>
-            </svg>
-            <svg class="icon icon--star">
-                <use xlink:href="public/images/icons/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="icon icon--youtube">
-                <use xlink:href="public/images/icons/sprite.svg#icon-youtube"></use>
-            </svg>
-            <svg class="icon icon--arrow">
-                <use xlink:href="public/images/icons/sprite.svg#icon-arrow"></use>
-            </svg>
-
+<header class="header">
+    <div class="header__container container">
+        <div class="header__row">
+            <div class="header__column-1">
+                <div class="logo">
+                    <a class="logo__link" href="#">
+                        <svg class="icon icon--logo">
+                            <use xlink:href="public/images/icons/sprite.svg#icon-logo"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="header__column-2">
+                <form class="search-form" action="">
+                    <input class="search-form__input" type="text" placeholder="Найти...">
+                    <div class="search-form__icon">
+                        <button class="search-form__icon-submit" >
+                            <svg class="icon icon--search">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="header__column-3">
+                <div class="profile">
+                    <div class="profile__user-name">
+                        <span class="profile__text">Константин</span>
+                    </div>
+                    <div class="profile__icon">
+                        <a class="profile__link" href="#">
+                            <img class="profile__avatar" src="public/images/avatar.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h4>Ссылки</h4>
-        <a class="link">Нажмите, чтобы увидеть стили</a>
-        <h4>Кнопки с заливкой</h4>
-        <h5>Активная с иконкой</h5>
-        <button class="button button--filled button--icon">Смотреть еще
-            <svg class="icon icon--arrow">
-                <use xlink:href="public/images/icons/sprite.svg#icon-arrow"></use>
-            </svg>
-        </button>
-        <h5>Неактивная с иконкой</h5>
-        <button disabled class="button button--filled button--icon">Смотреть еще
-            <svg class="icon icon--arrow">
-                <use xlink:href="public/images/icons/sprite.svg#icon-arrow"></use>
-            </svg></button>
-        <h5>Активная без иконки</h5>
-        <button class="button button--filled">Редактировать изменения</button>
-        <h5>Кнопка карточки</h5>
-        <button class="button button--filled button--half-rounded">Подробнее</button>
-        <h4>Кнопки без заливки</h4>
-        <h5>Обычная кнопка</h5>
-        <button class="button button--unfilled button--unfilled-default">Руководители</button>
-        <h5>Неактивная кнопка</h5>
-        <button disabled class="button button--unfilled button--unfilled-default">Руководители</button>
-        <h5>Маленькая кнопка</h5>
-        <button  class="button button--unfilled button--unfilled-small">Руководители</button>
+    </div>
+</header>
+<main class="minor">
+    <div class="minor__container container">
+        <div class="minor__row">
+            <div class="minor__menu-button">
+                <button class="button button--unfilled button--icon-menu">
+                    <svg class="icon icon--menu">
+                        <use xlink:href="public/images/icons/sprite.svg#icon-menu"></use>
+                    </svg>
+                    <span class="button__title-menu">Меню раздела</span>
+                </button>
+            </div>
+            <div class="minor__menu-list">
+                <div class="minor__menu-item">Избранное</div>
+                <div class="minor__menu-item">Моя компания</div>
+                <div class="minor__menu-item">Моё развитие</div>
+                <div class="minor__menu-item minor__menu-item--active">Новости компании</div>
+                <div class="minor__menu-item">Телефонная книга</div>
+            </div>
+            <div class="minor__content">
+                <div class="minor__nav">
+                    <a class="minor__nav-item link">Главная</a>
+                    <svg class="icon icon--arrow-right">
+                        <use xlink:href="public/images/icons/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                    <a class="minor__nav-item link">Избранное</a>
+                    <svg class="icon icon--arrow-right">
+                        <use xlink:href="public/images/icons/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                    <a class="minor__nav-item link">Моя компания</a>
+                    <svg class="icon icon--arrow-right">
+                        <use xlink:href="public/images/icons/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                    <a class="minor__nav-item link">Моё развитие</a>
+                    <svg class="icon icon--arrow-right">
+                        <use xlink:href="public/images/icons/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                    <a class="minor__nav-item link">Последнее</a>
+                </div>
+                <h1 class="minor__page-title">
+                    Редактировать профиль
+                </h1>
+                <div class="minor__page-content">
+                    <div class="minor__page-body">
+                        <h1>Базовые теги</h1>
+                        <h4>Заголовки</h4>
+                        <h1>Заголовок первого</h1>
+                        <p class="title--h1 title">Текст как заголовок</p>
+                        <h2>Заголовок второго</h2>
+                        <p class="title--h2 title">Текст как заголовок</p>
+                        <h3>Заголовок третьего</h3>
+                        <p class="title--h3 title">Текст как заголовок</p>
+                        <h4>Заголовок четвертого</h4>
+                        <p class="title--h4 title">Текст как заголовок</p>
+                        <h5>Заголовок пятого</h5>
+                        <p class="title--h5 title">Текст как заголовок</p>
+                        <h4>Параграфы</h4>
+                        <p>Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот</p>
+                        <p>Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах. Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку.</p>
+                        <h4>Нумерованные списки</h4>
+                        <ol>
+                            <li>Список</li>
+                            <li>Список</li>
+                            <li>Список</li>
+                            <li>Привет
+                                <ol>
+                                    <li>Лежа на панцирнотвердой спине, он видел, стоило ему</li>
+                                    <li>Лежа на панцирнотвердой спине, он видел, стоило</li>
+                                    <li>Но обычная комната</li>
+                                </ol>
+                            </li>
+                            <li>Список</li>
+                        </ol>
+                        <h4>Ненумерованные списки</h4>
+                        <ul>
+                            <li>Список</li>
+                            <li>Cписок в списке
+                                <ul>
+                                    <li>Лежа на панцирнотвердой спине, он видел</li>
+                                    <li>Лежа на панцирнотвердой спине, он видел, стоил</li>
+                                </ul></li>
+                            <li>Список</li>
+                        </ul>
+                        <h4>Тройная вложенность списков</h4>
+                        <ol>
+                            <li> Первый список
+                                <ul>
+                                    <li> Второй список
+                                        <ol>
+                                            <li>Третий список</li>
+                                            <li>Третий список</li>
+                                        </ol>
+                                    </li>
+                                    <li> Второй список
+                                        <ol>
+                                            <li>Третий список</li>
+                                            <li>Третий список</li>
+                                            <li>Третий список</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> Первый список </li>
+                        </ol>
+                        <h4>Цитата</h4>
+                        <blockquote>На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала
+                            зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука.
+                        </blockquote>
+                        <h4>Иконки</h4>
+                        <div style="display:flex; align-items: center;">
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-arrow-right"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-comment"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-dropdown-close"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-dropdown-open"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-close"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-eye"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-info"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-instagram"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-like"></use>
+                            </svg>
+                            <svg class="icon icon--logo">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-logo"></use>
+                            </svg>
+                            <svg class="icon icon--logo-footer">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-logo-footer"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-menu"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-profile"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-question"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-search"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-youtube"></use>
+                            </svg>
+                            <svg class="icon">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-arrow"></use>
+                            </svg>
+                        </div>
+                        <h4>Ссылки</h4>
+                        <a class="link">Нажмите, чтобы увидеть стили</a>
+                        <h4>Кнопки с заливкой</h4>
+                        <h5>Активная с иконкой</h5>
+                        <button class="button button--filled button--icon">
+                            <span class="button__title">Смотреть еще</span>
+                            <svg class="icon icon--arrow">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
+                        <h5>Неактивная с иконкой</h5>
+                        <button disabled class="button button--filled button--icon">
+                            <span class="button__title">Смотреть еще</span>
+                            <svg class="icon icon--arrow">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-arrow"></use>
+                            </svg></button>
+                        <h5>Активная без иконки</h5>
+                        <button class="button button--filled">
+                            <span class="button__title">Редактировать изменения</span></button>
+                        <h5>Кнопка карточки</h5>
+                        <button class="button button--filled button--half-rounded">
+                            <span class="button__title">Подробнее</span>
+                        </button>
+                        <h4>Кнопки без заливки</h4>
+                        <h5>Обычная кнопка</h5>
+                        <button class="button button--unfilled">
+                            <span class="button__title">Руководители</span>
+                        </button>
+                        <h5>Кнопка с иконкой</h5>
+                        <button class="button button--unfilled button--icon-menu">
+                            <svg class="icon icon--menu">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-menu"></use>
+                            </svg>
+                            <span class="button__title-menu">Меню раздела</span>
+                        </button>
+                        <h4>Чекбоксы</h4>
+                        <label class="check">
+                            <input class="check__input" type="checkbox">
+                            <span class="check__box"></span>
+                            <span class="check__title">Активный, не выбран</span>
+                        </label>
+                        <br>
+                        <label class="check">
+                            <input class="check__input" type="checkbox" checked>
+                            <span class="check__box"></span>
+                            <span class="check__title">Проснувшись однажды утром после беспокойного сна,
+                                    Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
+                                    Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову,
+                                    свой коричневый, выпуклый, разделенный дугообразными чешуйками живот,
+                                    на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.</span>
+                        </label>
+                        <br>
+                        <label class="check">
+                            <input class="check__input" type="checkbox" disabled>
+                            <span class="check__box"></span>
+                            <span class="check__title">Неактивный, не выбран</span>
+                        </label>
+                        <br>
+                        <label class="check">
+                            <input class="check__input" type="checkbox" checked disabled>
+                            <span class="check__box"></span>
+                            <span class="check__title">Неактивный, выбран</span>
+                        </label>
+                        <h4>Радио</h4>
+                        <label class="radio">
+                            <input class="radio__input" type="radio" >
+                            <span class="radio__title">Активна, не выбран</span>
+                        </label>
+                        <br>
+                        <label class="radio">
+                            <input class="radio__input" type="radio" checked >
+                            <span class="radio__title">Активна, выбран</span>
+                        </label>
+                        <br>
+                        <label class="radio">
+                            <input class="radio__input" type="radio" disabled>
+                            <span class="radio__title">Неактивна, не выбран</span>
+                        </label>
+                        <br>
+                        <label class="radio">
+                            <input class="radio__input" type="radio" checked disabled>
+                            <span class="radio__title">Неактивна, выбран</span>
+                        </label>
+                        <h4>Поля ввода</h4>
+                        <label class="input">
+                            <span class="input__title input__title--required">Город</span>
+                            <input placeholder="Название города" type="text" required>
+                        </label>
+                        <br>
+                        <label class="input">
+                            <span class="input__title">Расскажите о себе</span>
+                            <input placeholder="Введите пару слов о себе..." type="text" disabled>
+                        </label>
+                        <br>
+                        <label class="input">
+                            <span class="input__title">Расскажите о себе</span>
+                            <input value="На майские праздники" placeholder="Введите пару слов о себе..." type="text">
+                        </label>
+                        <br>
+                        <br>
+                        <label class="input input--lg">
+                            <span class="input__title">Расскажите о себе</span>
+                            <textarea rows="10" cols="45" placeholder="Введите пару слов о себе..." type="text" ></textarea>
+                        </label>
+                        <br>
+                        <label class="input input--lg">
+                            <span class="input__title">Расскажите о себе</span>
+                            <textarea rows="10" cols="45" placeholder="Введите пару слов о себе..." type="text" disabled></textarea>
+                        </label>
+                        <br>
+                    </div>
+                    <div class="minor__page-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
-<footer>
 
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__row">
+            <div class="footer__column-1">
+                <div class="icons">
+                    <div class="icons__item">
+                        <a class="icons__link" href="#">
+                            <svg class="icon icon--youtube">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-youtube"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="icons__item">
+                        <a class="icons__link" href="#">
+                            <svg class="icon--instagram">
+                                <use xlink:href="public/images/icons/sprite.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__column-2">
+                <div class="links links--footer">
+                    <div class="links__item">
+                        <a class="link">Правила</a>
+                    </div>
+                    <div class="links__item">
+                        <a class="link">Документы</a>
+                    </div>
+                    <div class="links__item">
+                        <a class="link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__column-3">
+                <div class="logo">
+                    <a class="logo__link" href="#">
+                        <svg class="icon icon--logo-footer">
+                            <use xlink:href="public/images/icons/sprite.svg#icon-logo-footer"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 <script src="public/js/script.js" type="text/javascript"></script>
 </body>

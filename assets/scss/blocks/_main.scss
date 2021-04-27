@@ -9,23 +9,16 @@
   }
 
   &__container{
-    margin: $container-horizontal-margin-auto;
-
     height: 100%;
+    margin: rem(145px) auto rem(100px);
 
-    @media (#{$screen-desktop}){
-      padding: 0 rem($container-horizontal-padding-desktop);
+    @media (#{$screen-tablet}){
+      margin: rem(130px) auto rem(100px);
     }
-
   }
   &__notifications{
     width: 100%;
     padding-left: rem(20px);
-    margin-top: rem(145px);
-
-    @media (#{$screen-tablet}){
-      margin-top: rem(130px);
-    }
 
     @media (#{$screen-desktop}){
       padding: 0;
@@ -57,7 +50,6 @@
 
   &__cards{
     margin-top: rem(30px);
-    margin-bottom: rem(100px);
     padding: 0 rem(20px);
     @media (#{$screen-desktop}){
 

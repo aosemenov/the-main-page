@@ -1,0 +1,95 @@
+.input{
+  $root: &;
+
+  display: inline-flex;
+  flex-flow: column;
+
+  &--lg{
+    display: flex;
+  }
+  &__title{
+    $line-height: 1.6;
+
+    @include text-little;
+    @include title($font-family-custom, $font-weight-regular, $line-height);
+
+    color: $matterhorn;
+    &--required{
+      &::after{
+        content: '*';
+        color: $color-info-icon;
+      }
+    }
+  }
+  & textarea{
+    cursor: pointer;
+
+    height: rem($input-lg-height);
+    width: 100%;
+    resize: none;
+
+    border: solid 1px $athens-gray;
+    border-radius: $border-radius-medium;
+
+    &:disabled{
+      background-color: $athens-gray;
+
+      cursor: default;
+    }
+    &:focus{
+      outline: none;
+      border: solid 1px $color-directory-active;
+    }
+
+    &::placeholder{
+      color: $color-directory;
+    }
+
+    &[type=text]{
+      @include text-small;
+
+      overflow: hidden;
+      flex-flow: nowrap;
+      text-overflow: ellipsis;
+
+      padding: rem($input-padding-vertical-placeholder) rem($input-padding-horizontal-placeholder);
+    }
+
+  }
+  & input{
+    cursor: pointer;
+
+    height: rem($input-height);
+    width: rem($input-width);
+
+    border: solid 1px $athens-gray;
+    border-radius: $border-radius-medium;
+
+    &:disabled{
+      background-color: $athens-gray;
+
+      cursor: default;
+    }
+
+
+    &:focus{
+      outline: none;
+      border: solid 1px $color-directory-active;
+    }
+
+    &::placeholder{
+      color: $color-directory;
+    }
+
+    &[type=text]{
+      @include text-small;
+
+      overflow: hidden;
+      flex-flow: nowrap;
+      text-overflow: ellipsis;
+
+      padding: rem($input-padding-vertical-placeholder) rem($input-padding-horizontal-placeholder);
+    }
+  }
+
+}
