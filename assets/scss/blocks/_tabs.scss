@@ -3,6 +3,7 @@
   border-bottom: solid 1px $color-directory;
   height: rem(40px);
   display:flex;
+  padding-left: 0;
 
   &__item{
     position: relative;
@@ -37,6 +38,10 @@
 
   &__name{
     cursor: pointer;
+
+    border:none;
+    outline: none;
+    background: $color-background;
 
     @include text-normal;
     @include title($font-family-custom-medium, $font-weight-medium, $line-height-normal);

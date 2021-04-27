@@ -2,7 +2,7 @@
   width: 100%;
 
   display:flex;
-  overflow-x: auto;
+  padding-left: 0;
 
   &::-webkit-scrollbar {
     width: 0;

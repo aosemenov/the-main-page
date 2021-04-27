@@ -10,8 +10,13 @@
     display:flex;
     flex-flow: row wrap;
     justify-content: space-between;
-
+    margin-bottom: rem(-2 * $padding);
     width: 100%;
+
+    @media (#{$screen-desktop}){
+      margin-bottom: rem(-31px);
+
+    }
   }
   &__column{
     width: percentage(1 / 1);
@@ -24,9 +29,9 @@
 
     @media (#{$screen-desktop}){
       width: percentage(392 / 1240);
-      margin-bottom: rem(31px);
 
       &:nth-child(3), &:nth-child(5){
+        margin-bottom: rem(31px);
         order: 2;
       }
     }
@@ -47,9 +52,5 @@
     @media (#{$screen-desktop}){
       margin-bottom: rem(32px);
     }
-  }
-  &__button{
-    display:flex;
-    justify-content: center;
   }
 }
