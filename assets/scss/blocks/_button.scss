@@ -1,5 +1,6 @@
 .button {
 	$padding: 15px;
+	$margin: 10px;
 
 	@include text-small;
 
@@ -38,11 +39,12 @@
 		}
 	}
 	&--icon {
+
 		display: flex;
 		align-items: center;
 
 		& svg {
-			margin-left: rem(10px);
+			margin-left: rem($margin);
 		}
 	}
 	&--icon-menu{
@@ -50,7 +52,7 @@
 		align-items: center;
 
 		& svg {
-			margin-right: rem(10px);
+			margin-right: rem($margin);
 		}
 	}
 

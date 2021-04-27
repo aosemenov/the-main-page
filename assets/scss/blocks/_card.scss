@@ -4,6 +4,7 @@
   $icon-margin: 6px;
   $margin: 10px;
   $padding: 20px;
+  $root: &;
 
   cursor: pointer;
 
@@ -157,7 +158,9 @@
         height: rem($card-prom-max-width);
       }
       &__content {
-        height: rem(175px);
+        $height-content-tablet: 175px;
+
+        height: rem($height-content-tablet);
         padding: 0;
       }
       &__body{
@@ -166,10 +169,12 @@
         padding:rem(15px) rem($padding) ;
       }
       &__star{
+        $star-size: 24px;
+
         position: relative;
 
-        width: rem(24px);
-        height: rem(24px);
+        width: rem($star-size);
+        height: rem($star-size);
       }
       &__footer {
         line-height: $line-height-little;
@@ -197,7 +202,8 @@
     }
 
     &__header{
-      height: rem(205px);
+      $height-header: 205px;
+      height: rem($height-header);
 
       @media (#{$screen-tablet}) {
         max-width: rem(392px);
@@ -230,12 +236,14 @@
   }
 
   &__star {
+    $star-size: 35px;
+
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: rem(35px);
-    height: rem(35px);
+    width: rem($star-size);
+    height: rem($star-size);
 
     border-radius: 0 rem($border-radius-medium) 0 rem($border-radius-large);
 
