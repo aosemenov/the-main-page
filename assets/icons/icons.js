@@ -1,2 +1,21 @@
 // Пример подключения иконки
-// import './svg/my-icon.svg';
+import './svg/arrow-right.svg';
+import './svg/comment.svg';
+import './svg/dropdown-close.svg';
+import './svg/dropdown-open.svg';
+import './svg/eye.svg';
+import './svg/info.svg';
+import './svg/instagram.svg';
+import './svg/like.svg';
+import './svg/logo.svg';
+import './svg/logo-footer.svg';
+import './svg/profile.svg';
+import './svg/search.svg';
+import './svg/star.svg';
+import './svg/youtube.svg';
+import './svg/question.svg';
+import './svg/menu.svg';
+import './svg/close.svg';
+import './svg/arrow.svg';
+import './svg/userpic.svg';
+import './svg/check.svg';

@@ -1,0 +1,20 @@
+.icons{
+  $margin: 23px;
+
+  display: flex;
+
+  &__item{
+    &:first-child{
+      margin-right: rem($margin);
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  &__link{
+    display:flex;
+
+    color: $color-directory;
+  }
+}

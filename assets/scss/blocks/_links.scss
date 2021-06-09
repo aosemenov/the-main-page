@@ -1,0 +1,26 @@
+.links{
+  display:flex;
+
+  &--footer{
+    flex-flow: column;
+    align-items: center;
+
+    @media (#{$screen-tablet}){
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__item{
+    margin-bottom:rem(20px);
+
+    @media (#{$screen-tablet}){
+      margin-right: rem(30px);
+      margin-bottom: 0;
+    }
+
+    &:last-child{
+      margin: 0;
+
+    }
+  }
+}

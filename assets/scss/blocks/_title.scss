@@ -1,0 +1,31 @@
+.title {
+
+  &--h1 {
+    @include text-biggest;
+    @include vertical-margin-zero;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-normal);
+  }
+
+  &--h2 {
+    @include text-huge;
+    @include vertical-margin-zero;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-normal);
+  }
+
+  &--h3 {
+    @include text-large;
+    @include vertical-margin-zero;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-small);
+  }
+  &--h4 {;
+    @include vertical-margin-zero;
+    @include text-average;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
+  }
+  &--h5 {
+    @include vertical-margin-zero;
+    @include text-normal;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-default);
+  }
+
+}

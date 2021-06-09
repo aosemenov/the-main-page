@@ -1,0 +1,71 @@
+.main {
+  background: $color-background;
+
+  min-height: calc(100vh - 274px);
+  min-width: $container-min-width-html;
+
+  @media (#{$screen-tablet}){
+    min-height: calc(100vh - 102px);
+  }
+
+  &__container{
+    height: 100%;
+    margin: rem(145px) auto rem(100px);
+
+    @media (#{$screen-tablet}){
+      margin: rem(130px) auto rem(100px);
+    }
+  }
+  &__notifications{
+    width: 100%;
+    padding-left: rem(20px);
+
+    @media (#{$screen-desktop}){
+      padding: 0;
+    }
+  }
+  &__button{
+    margin-top: rem(20px);
+    display:flex;
+    justify-content: center;
+
+    @media (#{$screen-desktop}){
+      margin-top: rem(31px);
+    }
+  }
+
+  &__about {
+    margin-top: rem(40px);
+    padding: 0 $container-horizontal-padding-mobile;
+
+    @media (#{$screen-tablet}){
+      margin-top: rem(50px);
+    }
+
+    @media (#{$screen-desktop}){
+      margin-top: rem(31px);
+      padding: 0 ;
+    }
+  }
+
+  &__tabs{
+    margin-top: rem(40px);
+    padding: 0 $container-horizontal-padding-mobile;
+
+    @media (#{$screen-desktop}){
+      padding: 0 ;
+    }
+  }
+
+  &__cards{
+    margin-top: rem(30px);
+    padding: 0 rem(20px);
+    @media (#{$screen-desktop}){
+
+    }
+    @media (#{$screen-desktop}){
+      margin-top: rem(51px);
+      padding: 0 ;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.container{
+  box-sizing: content-box;
+  height: 100%;
+
+  @media (#{$screen-desktop}){
+
+    max-width: $container-width-desktop;
+  }
+}

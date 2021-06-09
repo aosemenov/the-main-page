@@ -1,0 +1,56 @@
+.cards{
+  $padding: 10;
+
+  display:none;
+  &--active{
+    display: block;
+
+  }
+  &__row{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: rem(-2 * $padding);
+    width: 100%;
+
+    @media (#{$screen-desktop}){
+      margin-bottom: rem(-31px);
+
+    }
+  }
+  &__column{
+    width: percentage(1 / 1);
+    margin-bottom: rem(2 * $padding);
+    order: 1;
+
+    @media (#{$screen-tablet}){
+      width: percentage(1 / 2 - 10 / 728);
+    }
+
+    @media (#{$screen-desktop}){
+      width: percentage(392 / 1240);
+
+      &:nth-child(3), &:nth-child(5){
+        margin-bottom: rem(31px);
+        order: 2;
+      }
+    }
+
+    &--bg{
+      width: 100%;
+      height: rem($card-news-max-width);
+
+      @media (#{$screen-desktop}){
+        width: percentage(816 / 1240);
+      }
+    }
+  }
+  &__column-prom{
+    width: 100%;
+    margin-bottom: rem(20px);
+
+    @media (#{$screen-desktop}){
+      margin-bottom: rem(32px);
+    }
+  }
+}

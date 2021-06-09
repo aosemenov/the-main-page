@@ -1,0 +1,49 @@
+.slick{
+  &-dots{
+     $dots-size: 9px;
+    & li{
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin-right: rem(5px);
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      & button{
+
+        @include indentation-zero;
+
+        cursor: pointer;
+        width: rem($dots-size);
+        height:  rem($dots-size);
+
+        font-size: 0;
+        border: none;
+        border-radius: 50%;
+        background: $athens-gray;
+      }
+    }
+    & li.slick-active  button{
+      background: $color-list-point;
+    }
+  }
+}
+.slick-list{
+  overflow: hidden;
+}
+.slick-track{
+  display:flex;
+}
+.slick-dots{
+  @include indentation-zero;
+
+  margin-top: rem(21px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

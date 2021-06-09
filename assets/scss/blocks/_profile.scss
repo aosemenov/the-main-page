@@ -1,0 +1,68 @@
+.profile{
+    cursor: pointer;
+
+    height: 100%;
+    display:flex;
+    align-items: center;
+
+    @media (#{$screen-tablet}){
+        border-left: solid 1px $athens-gray;
+
+    }
+
+    &__avatar{
+        $avatar-size: 40px;
+
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+
+        width: rem($avatar-size);
+        height: rem($avatar-size);
+
+    }
+
+    &__user-name{
+        $user-name-width: 79px;
+
+        display: none;
+        overflow: hidden;
+        flex-flow: nowrap;
+
+        text-overflow: ellipsis;
+
+        margin: 0 rem(10px) 0 rem(19px);
+
+        width: rem($user-name-width);
+
+        cursor: pointer;
+        text-align: right;
+
+        @media (#{$screen-tablet}){
+            display: block;
+
+        }
+    }
+
+    &__text{
+        @include text-small;
+        @include title($font-family-custom, $font-weight-regular, $line-height-little);
+
+        letter-spacing: 0.01em;
+
+        color: $color-text-secondary;
+
+        &:hover{
+            color: $color-text;
+        }
+    }
+
+    &__icon{
+        display:flex;
+        align-items:center;
+    }
+    &__link{
+        display:flex;
+        color: $color-text-link;
+    }
+}

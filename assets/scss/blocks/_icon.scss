@@ -1,0 +1,150 @@
+.icon {
+	width: rem(24px);
+	height: rem(24px);
+
+	&--close {
+		width: rem(12px);
+		height: rem(12px);
+	}
+
+	&--menu {
+		width: rem(21px);
+		height: rem(14px);
+	}
+
+	&--arrow-right {
+		width: rem(6px);
+		height: rem(10px);
+
+		color:$color-directory;
+		margin: 0 rem(20px);
+
+		&:last-child{
+			color:$color-directory-active;
+
+			margin-right: 0;
+		}
+	}
+
+	&--arrow {
+		width: rem(13px);
+		height: rem(12px);
+	}
+
+	&--comment {
+		width: rem(12.88px);
+		height: rem(12px);
+	}
+	&--dropdown-close{
+		width: rem(10px);
+		height: rem(5px);
+	}
+	&--dropdown-open{
+		width: rem(10px);
+		height: rem(5px);
+	}
+	&--logo {
+		width: rem(135px);
+		height: rem(31px);
+	}
+	&--logo-footer {
+		width: rem(95px);
+		height: rem(19px);
+
+		&:hover {
+			color: $slate-gray;
+		}
+	}
+	&--eye {
+		width: rem(15px);
+		height: rem(10px);
+	}
+
+	&--info {
+		width: rem(24px);
+		height: rem(24px);
+
+		color:$color-text-link;
+
+		&-important{
+			color: $color-info-icon;
+		}
+	}
+
+	&--instagram {
+		width: rem(40px);
+		height: rem(40px);
+
+		&:hover {
+			color: $slate-gray;
+		}
+	}
+
+	&--like {
+		width: rem(14px);
+		height: rem(12px);
+	}
+
+	&--profile {
+		width: rem(24px);
+		height: rem(24px);
+	}
+
+
+	&--question {
+		width: rem(24px);
+		height: rem(24px);
+		color:$wild-blue-yonder;
+	}
+
+	&--search {
+		width: rem(24px);
+		height: rem(24px);
+	}
+	&--star {
+		cursor: pointer;
+
+		width: rem(24px);
+		height: rem(24px);
+		fill: $color-text-link;
+		color: $color-background-light;
+
+		&:hover{
+			color: rgba(52, 170, 221, .5);
+		}
+
+		&:active{
+			color: $color-text-link;
+		}
+	}
+	&--star-bg {
+		cursor: pointer;
+
+		width: rem(24px);
+		height: rem(24px);
+
+		fill: $color-background-light;
+		color: rgba(255, 255, 255, 0);;
+
+		&:hover{
+			color: rgba(255, 255, 255, .5);;
+		}
+
+		&:active{
+			color: $color-background-light;
+		}
+	}
+
+	&--youtube {
+		width: rem(40px);
+		height: rem(40px);
+
+		&:hover {
+			color: $slate-gray;
+		}
+	}
+	&--userpic{
+		width: rem(40px);
+		height: rem(40px);
+	}
+}

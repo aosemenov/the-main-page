@@ -11,3 +11,5 @@
 *.swp 
 node_modules/
 public/
+*.ini
+.ssh/

@@ -1,0 +1,21 @@
+.form{
+
+  &__group{
+    display:flex;
+    flex-flow: column;
+  }
+  &__item{
+    margin-bottom: rem(21px);
+
+    &:last-child{
+      margin-bottom: rem(50px);
+    }
+  }
+  &__title{
+    @include text-huge;
+    @include title($font-family-custom-medium, $font-weight-medium, $line-height-normal);
+
+    margin: 0 0 rem(11px) 0;
+
+  }
+}

@@ -1,0 +1,102 @@
+.button {
+	$padding: 15px;
+	$margin: 10px;
+
+	@include text-small;
+
+	text-decoration: none;
+	border: 0;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&--filled{
+		color: $white;
+		border-radius: $border-radius-medium;
+
+		padding: rem(17.5px) rem(2*$padding);
+		background-color: $curious-blue;
+
+		&:hover {
+			background-color: $wild-blue-yonder;
+		}
+
+		&:active {
+			opacity: 0.5;
+		}
+
+		&:disabled {
+			background-color: $athens-gray;
+			color: $heather;
+		}
+	}
+	&--filled &{
+		$line-height: 15px;
+		&__title{
+			@include title($font-family-custom-medium, $font-weight-medium, $line-height);
+		}
+	}
+	&--icon {
+
+		display: flex;
+		align-items: center;
+
+		& svg {
+			margin-left: rem($margin);
+		}
+	}
+	&--icon-menu{
+		display: flex;
+		align-items: center;
+
+		& svg {
+			margin-right: rem($margin);
+		}
+	}
+
+	&--half-rounded {
+		padding: rem(6px) rem(2*$padding);
+		margin-left: rem(15px);
+
+		border-radius: $border-radius-medium 0 $border-radius-medium 0;
+	}
+
+	&--half-rounded &{
+		&__title{
+			@include title($font-family-custom, $font-weight-regular, $line-height-little);
+		}
+	}
+	&--unfilled{
+		background: none;
+		color: $curious-blue;
+
+		&:hover {
+			color: $wild-blue-yonder;
+		}
+
+		&:active {
+			opacity: 0.5;
+			color: $wild-blue-yonder;
+		}
+
+		&:disabled {
+			color: $heather;
+		}
+
+	}
+	&--unfilled &{
+		&__title{
+			@include indentation-zero;
+			@include title($font-family-custom-medium, $font-weight-medium, $line-height-little);
+		}
+		&__title-menu{
+			@include indentation-zero;
+			@include title($font-family-custom, $font-weight-bold, $line-height-little);
+		}
+	}
+}
+
+
+
